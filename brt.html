@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Batch Reporting Tool</title>
+    <style>
+        /* Main container */
+        .container {
+            width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            font-family: "Segoe UI", sans-serif;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        /* Section container */
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        /* Staging Table Section */
+        .section {
+            flex: 1;
+            background-color: #e9f4fc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+        }
+        
+        .section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .section .batch {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        
+        .section .batch label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .section .batch p {
+            margin-bottom: 5px;
+        }
+        
+        /* EIS Section */
+        .eis-section {
+            flex: 1;
+            background-color: #e9f4fc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+        }
+        
+        .eis-section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .eis-section .batch {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        
+        .eis-section .batch label {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .eis-section .batch p {
+            margin-bottom: 5px;
+        }
+        
+        /* Solution text */
+        .solution-text {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function showSolutionText(batchId) {
+            var solutionText = document.getElementById(batchId + "-solution");
+            var currentDisplay = solutionText.style.display;
+            solutionText.style.display = currentDisplay === "block" ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Batch Reporting Tool</h1>
+        </div>
+        
+        <div class="section-container">
+            <div class="section">
+                <h2>Staging Tables</h2>
+                
+                <div class="batch" onclick="showSolutionText('staging-batch-1');">
+                    <label for="staging-batch-1">Batch 1:</label>
+                    <p id="staging-batch-1">Data: [Sample Data]</p>
+                    <div class="solution-text" id="staging-batch-1-solution">
+                        Solution for Batch 1
+                    </div>
+                </div>
+                
+                <div class="batch" onclick="showSolutionText('staging-batch-2');">
+                    <label for="staging-batch-2">Batch 2:</label>
+                    <p id="staging-batch-2">Data: [Sample Data]</p>
+                    <div class="solution-text" id="staging-batch-2-solution">
+                        Solution for Batch 2
+                    </div>
+                </div>
+                
+                <div class="batch" onclick="showSolutionText('staging-batch-3');">
+                    <label for="staging-batch-3">Batch 3:</label>
+                    <p id="staging-batch-3">Data: [Sample Data]</p>
+                    <div class="solution-text" id="staging-batch-3-solution">
+                        Solution for Batch 3
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>EIS</h2>
+                
+                <div class="batch" onclick="showSolutionText('eis-batch-1');">
+                    <label for="eis-batch-1">Batch 1:</label>
+                    <p id="eis-batch-1">Data: [Sample Data]</p>
+                    <div class="solution-text" id="eis-batch-1-solution">
+                        Solution for Batch 1
+                    </div>
+                </div>
+                
+                <div class="batch" onclick="showSolutionText('eis-batch-2');">
+                    <label for="eis-batch-2">Batch 2:</label>
+                    <p id="eis-batch-2">Data: [Sample Data]</p>
+                    <div class="solution-text" id="eis-batch-2-solution">
+                        Solution for Batch 2
+                    </div>
+                </div>
+                
+                <div class="batch" onclick="showSolutionText('eis-batch-3');">
+                    <label for="eis-batch-3">Batch 3:</label>
+                    <p id="eis-batch-3">Data: [Sample Data]</p>
+                    <div class="solution-text" id="eis-batch-3-solution">
+                        Solution for Batch 3
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
